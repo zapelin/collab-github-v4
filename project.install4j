@@ -1,0 +1,2846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install4j version="5.1.12" transformSequenceNumber="4">
+  <directoryPresets config="." />
+  <application name="${compiler:PRODUCTNAME} Server" distributionSourceDir="" applicationId="6580-8151-9166-3516" mediaDir="../../build/dist" mediaFilePattern="${compiler:sys.shortName}_${compiler:sys.version}_${compiler:sys.platform}" compression="6" lzmaCompression="false" pack200Compression="false" excludeSignedFromPacking="true" commonExternalFiles="false" createMd5Sums="true" shrinkRuntime="true" shortName="ccollab_server" publisher="${compiler:COMPANYNAME}" publisherWeb="http://smartbear.com" version="${compiler:projectVersion}" allPathsRelative="true" backupOnSave="false" autoSave="false" convertDotsToUnderscores="true" macSignature="????" installerName="" javaMinVersion="1.7" javaMaxVersion="" allowBetaVM="false" jdkMode="jdk" jdkName="JDK 1.7">
+    <languages skipLanguageSelection="false" languageSelectionInPrincipalLanguage="false">
+      <principalLanguage id="en" customLocalizationFile="" />
+      <additionalLanguages />
+    </languages>
+    <searchSequence>
+      <registry />
+      <envVar name="JAVA_HOME" />
+      <envVar name="JDK_HOME" />
+    </searchSequence>
+    <variables>
+      <variable name="COMPANYNAME" value="SmartBear Software" description="" category="" />
+      <variable name="PRODUCTNAME" value="Collaborator" description="" category="" />
+      <variable name="projectVersion" value="10.0.10001" description="" category="" />
+      <variable name="tomcatVersion" value="" description="" category="" />
+      <variable name="commonsLoggingVersion" value="" description="" category="" />
+      <variable name="commonsCodecVersion" value="" description="" category="" />
+    </variables>
+    <mergedProjects />
+    <codeSigning macEnabled="true" macPkcs12File="../../../res/smartbear_mac.p12" windowsEnabled="true" windowsKeySource="pkcs12" windowsPvkFile="" windowsSpcFile="" windowsPkcs12File="../../../res/smartbear_certificate.pfx" />
+  </application>
+  <files keepModificationTimes="false" missingFilesStrategy="warn" globalExcludeSuffixes="" defaultOverwriteMode="4" defaultUninstallMode="0" launcherOverwriteMode="3" defaultFileMode="644" defaultDirMode="755">
+    <filesets />
+    <roots />
+    <mountPoints>
+      <mountPoint id="133" root="" location="tomcat" mode="755" />
+      <mountPoint id="195" root="" location="tomcat/webapps" mode="755" />
+      <mountPoint id="219" root="" location="tomcat/wars" mode="755" />
+      <mountPoint id="221" root="" location="tomcat/logs" mode="755" />
+      <mountPoint id="229" root="" location="tomcat/conf" mode="755" />
+      <mountPoint id="16451" root="" location="tomcat/lib" mode="755" />
+      <mountPoint id="218" root="" location="" mode="755" />
+    </mountPoints>
+    <entries>
+      <fileEntry mountPoint="219" file="../../../collab-server/build/libs/smartbear-ccollab-server.war" overwriteMode="1" shared="false" fileMode="644" uninstallMode="0" overrideFileMode="true" overrideOverwriteMode="true" overrideUninstallMode="true" />
+      <fileEntry mountPoint="16451" file="../../../collab-realm/build/libs/collab-realm-${compiler:projectVersion}.jar" overwriteMode="1" shared="false" fileMode="644" uninstallMode="0" overrideFileMode="true" overrideOverwriteMode="true" overrideUninstallMode="true" />
+      <fileEntry mountPoint="16451" file="../../build/distLibs/commons-codec-${compiler:commonsCodecVersion}.jar" overwriteMode="1" shared="false" fileMode="644" uninstallMode="0" overrideFileMode="true" overrideOverwriteMode="true" overrideUninstallMode="true" />
+      <fileEntry mountPoint="16451" file="../../build/distLibs/commons-logging-${compiler:commonsLoggingVersion}.jar" overwriteMode="1" shared="false" fileMode="644" uninstallMode="0" overrideFileMode="true" overrideOverwriteMode="true" overrideUninstallMode="true" />
+      <dirEntry mountPoint="133" file="../../build/distLibs/apache-tomcat-${compiler:tomcatVersion}" overwriteMode="1" shared="false" fileMode="644" uninstallMode="0" overrideFileMode="true" overrideOverwriteMode="true" overrideUninstallMode="true" entryMode="direct" subDirectory="" excludeSuffixes="*.sh" dirMode="755" overrideDirMode="true">
+        <exclude>
+          <entry location="webapps/docs" fileType="regular" />
+          <entry location="webapps/manager" fileType="regular" />
+          <entry location="webapps/examples" fileType="regular" />
+          <entry location="webapps/host-manager" fileType="regular" />
+          <entry location="webapps/ROOT" fileType="regular" />
+          <entry location="bin/startup.sh" fileType="regular" />
+          <entry location="bin/tool-wrapper.sh" fileType="regular" />
+          <entry location="bin/catalina.sh" fileType="regular" />
+          <entry location="bin/version.sh" fileType="regular" />
+          <entry location="bin/configtest.sh" fileType="regular" />
+          <entry location="bin/daemon.sh" fileType="regular" />
+          <entry location="bin/setclasspath.sh" fileType="regular" />
+          <entry location="bin/digest.sh" fileType="regular" />
+          <entry location="bin/shutdown.sh" fileType="regular" />
+        </exclude>
+      </dirEntry>
+      <dirEntry mountPoint="133" file="../../build/distLibs/apache-tomcat-${compiler:tomcatVersion}" overwriteMode="1" shared="false" fileMode="755" uninstallMode="0" overrideFileMode="true" overrideOverwriteMode="true" overrideUninstallMode="true" entryMode="direct" subDirectory="" excludeSuffixes="" dirMode="755" overrideDirMode="true">
+        <exclude>
+          <entry location="LICENSE" fileType="regular" />
+          <entry location="webapps" fileType="regular" />
+          <entry location="lib" fileType="regular" />
+          <entry location="NOTICE" fileType="regular" />
+          <entry location="RUNNING.txt" fileType="regular" />
+          <entry location="work" fileType="regular" />
+          <entry location="conf" fileType="regular" />
+          <entry location="logs" fileType="regular" />
+          <entry location="bin/catalina-tasks.xml" fileType="regular" />
+          <entry location="bin/configtest.bat" fileType="regular" />
+          <entry location="bin/digest.bat" fileType="regular" />
+          <entry location="bin/commons-daemon-native.tar.gz" fileType="regular" />
+          <entry location="bin/bootstrap.jar" fileType="regular" />
+          <entry location="bin/tool-wrapper.bat" fileType="regular" />
+          <entry location="bin/startup.bat" fileType="regular" />
+          <entry location="bin/version.bat" fileType="regular" />
+          <entry location="bin/catalina.bat" fileType="regular" />
+          <entry location="bin/tomcat-native.tar.gz" fileType="regular" />
+          <entry location="bin/setclasspath.bat" fileType="regular" />
+          <entry location="bin/commons-daemon.jar" fileType="regular" />
+          <entry location="bin/tomcat-juli.jar" fileType="regular" />
+          <entry location="bin/shutdown.bat" fileType="regular" />
+          <entry location="temp" fileType="regular" />
+          <entry location="RELEASE-NOTES" fileType="regular" />
+        </exclude>
+      </dirEntry>
+      <fileEntry mountPoint="218" file="./ccollab-server.vmoptions" overwriteMode="0" shared="false" fileMode="644" uninstallMode="0" overrideFileMode="true" overrideOverwriteMode="true" overrideUninstallMode="true" />
+      <fileEntry mountPoint="218" file="../../../res/license.txt" overwriteMode="1" shared="false" fileMode="644" uninstallMode="0" overrideFileMode="true" overrideOverwriteMode="true" overrideUninstallMode="true" />
+    </entries>
+    <components />
+  </files>
+  <launchers>
+    <launcher name="ccollab-server" id="2" customizedId="" external="false" excludeFromMenu="true" unixMode="755" menuName="" icnsFile="" customMacBundleIdentifier="false" macBundleIdentifier="" swtApp="false" fileset="" macBundleBinary="JavaApplicationStub" addMacEntitlements="false" macEntitlementsFile="">
+      <executable name="ccollab-server" type="1" iconSet="false" iconFile="" executableDir="." redirectStderr="true" stderrFile="error.log" stderrMode="overwrite" redirectStdout="true" stdoutFile="output.log" stdoutMode="overwrite" failOnStderrOutput="true" executableMode="3" changeWorkingDirectory="true" workingDirectory="tomcat" singleInstance="true" serviceStartType="2" serviceDependencies="" serviceDescription="${compiler:PRODUCTNAME} web GUI and web services server" jreLocation="" executionLevel="asInvoker" checkConsoleParameter="false" globalSingleInstance="false" singleInstanceActivate="true">
+        <versionInfo include="true" fileVersion="${compiler:sys.version}" fileDescription="${compiler:PRODUCTNAME} Server" legalCopyright="Copyright (c) 2005-2014 ${compiler:COMPANYNAME}" internalName="${compiler:sys.shortName}" productName="" />
+      </executable>
+      <splashScreen show="false" autoOff="true" alwaysOnTop="true" width="0" height="0" bitmapFile="" java6SplashScreen="false">
+        <text>
+          <statusLine x="20" y="20" text="" font="Arial" fontSize="8" fontColor="0,0,0" fontWeight="500" />
+          <versionLine x="20" y="40" text="version ${compiler:sys.version}" font="Arial" fontSize="8" fontColor="0,0,0" fontWeight="500" />
+        </text>
+      </splashScreen>
+      <java mainClass="org.apache.catalina.startup.Bootstrap" vmParameters="-server" arguments="" allowVMPassthroughParameters="true" preferredVM="server" bundleRuntime="true">
+        <classPath>
+          <archive location="tomcat/bin/bootstrap.jar" failOnError="false" />
+          <archive location="tomcat/bin/tomcat-juli.jar" failOnError="false" />
+        </classPath>
+        <nativeLibraryDirectories />
+      </java>
+      <includedFiles />
+      <unextractableFiles />
+      <vmOptionsFile mode="none" overwriteMode="0" fileMode="644">
+        <content />
+      </vmOptionsFile>
+      <customScript mode="3" file="">
+        <content>if [ -r /etc/redhat-release ]; then 
+  if ! head -n 7 $prg_dir/ccollab-server | grep INIT &gt;/dev/null ; then
+    orig=$prg_dir/ccollab-server
+    new=${orig}.new
+    head -n 1 $orig &gt; $new
+    echo "#" &gt;&gt;$new
+    echo "# chkconfig: 2345 65 36" &gt;&gt;$new
+    echo "# description: Collaborator Server start and stop script" &gt;&gt;$new
+    echo "### BEGIN INIT INFO" &gt;&gt;$new
+    echo "# Provides: \$ccollab-server" &gt;&gt;$new
+    echo "### END INIT INFO" &gt;&gt;$new
+    tail -n +2 $orig &gt;&gt;$new
+    mv $new $orig
+    chmod 755 $orig
+  fi
+fi</content>
+      </customScript>
+      <infoPlist mode="1" file="">
+        <content />
+      </infoPlist>
+      <iconImageFiles />
+    </launcher>
+  </launchers>
+  <installerGui installerType="1" addOnAppId="7402-7382-7680-3674" suggestPreviousLocations="false" autoUpdateDescriptorUrl="" useAutoUpdateBaseUrl="false" autoUpdateBaseUrl="">
+    <customCode>
+      <archive location="../../../collab-common/build/libs/collab-common-${compiler:projectVersion}.jar" />
+      <archive location="../../build/libs/collab-server-installer-${compiler:projectVersion}.jar" />
+      <archive location="../../build/distLibs/commons-io-1.4.jar" />
+      <archive location="../../build/distLibs/commons-lang-2.6.jar" />
+      <archive location="../../build/distLibs/commons-logging-1.2.jar" />
+      <archive location="../../build/distLibs/jsr173-1.0.jar" />
+    </customCode>
+    <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
+      <commentFiles />
+      <customAttributes />
+    </autoUpdate>
+    <applications>
+      <application name="" id="installer" customizedId="" beanClass="com.install4j.runtime.beans.applications.InstallerApplication" enabled="true" commentSet="false" comment="" actionElevationType="none" fileset="" customIcnsFile="" customIcoFile="" macEntitlementsFile="" automaticLauncherIntegration="false" launchMode="startupFirstWindow" launchInNewProcess="false" launchSchedule="updateSchedule" allLaunchers="true">
+        <serializedBean>
+          <java class="java.beans.XMLDecoder">
+            <object class="com.install4j.runtime.beans.applications.InstallerApplication" id="InstallerApplication0">
+              <void property="customHeaderImage">
+                <object class="com.install4j.api.beans.ExternalFile">
+                  <string>./diamond-new-48.png</string>
+                </object>
+              </void>
+              <void property="customIconImageFiles">
+                <void method="add">
+                  <object class="com.install4j.api.beans.ExternalFile">
+                    <string>./diamond-16.png</string>
+                  </object>
+                </void>
+                <void method="add">
+                  <object class="com.install4j.api.beans.ExternalFile">
+                    <string>./diamond-32.png</string>
+                  </object>
+                </void>
+              </void>
+              <void property="frameHeight">
+                <int>430</int>
+              </void>
+              <void property="frameSizeClientArea">
+                <boolean>false</boolean>
+              </void>
+              <void property="frameWidth">
+                <int>600</int>
+              </void>
+              <void property="useCustomIcon">
+                <boolean>true</boolean>
+              </void>
+              <void property="watermark">
+                <boolean>false</boolean>
+              </void>
+            </object>
+          </java>
+        </serializedBean>
+        <launcherIds />
+        <variables />
+        <startup>
+          <screen name="" id="15" customizedId="" beanClass="com.install4j.runtime.beans.screens.StartupScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.screens.StartupScreen" />
+              </java>
+            </serializedBean>
+            <condition />
+            <validation />
+            <preActivation />
+            <postActivation />
+            <actions>
+              <action name="" id="17752" customizedId="" beanClass="com.install4j.runtime.beans.actions.misc.RequestPrivilegesAction" enabled="true" commentSet="false" comment="" actionElevationType="none" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.misc.RequestPrivilegesAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+            </actions>
+            <formComponents />
+          </screen>
+        </startup>
+        <screens>
+          <screen name="" id="234" customizedId="" beanClass="com.install4j.runtime.beans.screens.WelcomeScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.screens.WelcomeScreen">
+                  <void property="bannerBackground">
+                    <object class="java.awt.Color">
+                      <int>255</int>
+                      <int>255</int>
+                      <int>255</int>
+                      <int>255</int>
+                    </object>
+                  </void>
+                  <void property="bannerImageFile">
+                    <object class="com.install4j.api.beans.ExternalFile">
+                      <string>./banner.png</string>
+                    </object>
+                  </void>
+                </object>
+              </java>
+            </serializedBean>
+            <condition />
+            <validation />
+            <preActivation />
+            <postActivation />
+            <actions>
+              <action name="" id="17753" customizedId="" beanClass="com.install4j.runtime.beans.actions.misc.LoadResponseFileAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.misc.LoadResponseFileAction" />
+                  </java>
+                </serializedBean>
+                <condition>context.getBooleanVariable("sys.confirmedUpdateInstallation")</condition>
+              </action>
+              <action name="" id="18116" customizedId="" beanClass="com.smartbear.ccollab.installer.action.RegisterInstallStartedAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.RegisterInstallStartedAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+            </actions>
+            <formComponents />
+          </screen>
+          <screen name="" id="235" customizedId="" beanClass="com.install4j.runtime.beans.screens.LicenseScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.screens.LicenseScreen" id="LicenseScreen0">
+                  <void id="LocalizedExternalFile0" property="displayedTextFile">
+                    <void property="languageIdToExternalFile">
+                      <void method="put">
+                        <string>en</string>
+                        <object class="com.install4j.api.beans.ExternalFile">
+                          <string>../../../res/license.html</string>
+                        </object>
+                      </void>
+                    </void>
+                  </void>
+                </object>
+              </java>
+            </serializedBean>
+            <condition />
+            <validation />
+            <preActivation />
+            <postActivation />
+            <actions>
+              <action name="" id="17091" customizedId="" beanClass="com.smartbear.ccollab.installer.action.FindRelatedInstallationsAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.FindRelatedInstallationsAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+            </actions>
+            <formComponents />
+          </screen>
+          <screen name="Multiple Installations Found" id="17201" customizedId="" beanClass="com.install4j.runtime.beans.screens.FormScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.screens.FormScreen">
+                  <void property="subTitle">
+                    <string>Upgrade or perform a new installation</string>
+                  </void>
+                  <void property="title">
+                    <string>Multiple Installations Found</string>
+                  </void>
+                </object>
+              </java>
+            </serializedBean>
+            <condition>return (context.getVariable("smartbear.multiple.installation.array") != null);</condition>
+            <validation>Object chosenPath = context.getVariable("smartbear.chosen.path");
+boolean isUpgrade = (Boolean.TRUE == context.getVariable("smartbear.isupgrade"));
+
+// We can always continue if it's not an upgrade. They will be prompted for an install location.
+if(!isUpgrade) return true;
+
+// If it IS an upgrade, make sure they made a selection.
+if(null != chosenPath) {
+    Integer zero = new Integer(0);
+    if(!zero.equals(chosenPath)) return true;
+}
+
+Util.showErrorMessage("You must choose an installation to upgrade before continuing.");
+
+return false;</validation>
+            <preActivation />
+            <postActivation />
+            <actions>
+              <action name="" id="17315" customizedId="" beanClass="com.smartbear.ccollab.installer.action.UpdateInstallationPathAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.UpdateInstallationPathAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+            </actions>
+            <formComponents>
+              <formComponent name="" id="17203" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                      <void property="labelHtml">
+                        <string>&lt;p&gt;Multiple previous installation paths were found.
+To upgrade a previous installation, please choose its path from the list below.&lt;/p&gt;
+
+&lt;p&gt;If you wish to install to a new location, uncheck the checkbox below. On the next screen, you will be prompted for an installation path.&lt;/p&gt;</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+              <formComponent name="" id="17205" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.CheckboxComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.CheckboxComponent" id="CheckboxComponent0">
+                      <void property="checkboxText">
+                        <string>Upgrade Existing Installation</string>
+                      </void>
+                      <void property="coupledComponentIds">
+                        <void method="add">
+                          <string>17202</string>
+                        </void>
+                      </void>
+                      <void property="initiallySelected">
+                        <boolean>true</boolean>
+                      </void>
+                      <void property="selectionScript">
+                        <object class="com.install4j.api.beans.ScriptProperty">
+                          <void property="value">
+                            <string />
+                          </void>
+                        </object>
+                      </void>
+                      <void property="variableName">
+                        <string>smartbear.isupgrade</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+              <formComponent name="" id="17202" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.DropdownListComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.DropdownListComponent">
+                      <void property="labelText">
+                        <string>Upgrade this Location:</string>
+                      </void>
+                      <void property="listEntries">
+                        <array class="java.lang.String" length="1">
+                          <void index="0">
+                            <string>${installer:smartbear.multiple.installation.array}</string>
+                          </void>
+                        </array>
+                      </void>
+                      <void property="selectionChangedScript">
+                        <object class="com.install4j.api.beans.ScriptProperty">
+                          <void property="value">
+                            <string />
+                          </void>
+                        </object>
+                      </void>
+                      <void property="variableName">
+                        <string>smartbear.chosen.path</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+            </formComponents>
+          </screen>
+          <screen name="" id="18273" customizedId="" beanClass="com.install4j.runtime.beans.screens.InstallationDirectoryScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.screens.InstallationDirectoryScreen" />
+              </java>
+            </serializedBean>
+            <condition>/*debugging info:
+
+Util.showMessage("sys.confirmedUpdateInstallation: " + context.getBooleanVariable("sys.confirmedUpdateInstallation") + "\n" +
+"smartbear.isupgrade: " + context.getBooleanVariable("smartbear.isupgrade") + "\n" +
+"context.getInstallationDirectory: " + context.getInstallationDirectory().getPath()
+);
+*/
+
+// TODO: do we need to check context.isUnattanded to skip this?
+
+File installDir = context.getInstallationDirectory();
+if (installDir.exists() &amp;&amp; installDir.isDirectory() &amp;&amp; installDir.list().length &gt; 0) {
+    // if the install dir exists and is not empty, we want to show the dir selection path only if update was NOT chosen somehow
+    //
+    // sys.confirmedUpdateInstallation is set by the welcome screen option to update (true) or no, chose different path (false)
+    // smartbear.isupgrade is set by the following screen that prompts if there are multiple prior locations (same boolean sense as above)
+    return !(context.getBooleanVariable("sys.confirmedUpdateInstallation") || context.getBooleanVariable("smartbear.isupgrade"));
+}
+
+// if the dir doesn't exist
+return false;</condition>
+            <validation />
+            <preActivation />
+            <postActivation />
+            <actions>
+              <action name="" id="18409" customizedId="" beanClass="com.smartbear.ccollab.installer.action.RegisterAdvancedConfigsChosenAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.RegisterAdvancedConfigsChosenAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+            </actions>
+            <formComponents />
+          </screen>
+          <screen name="First User Info" id="18118" customizedId="" beanClass="com.install4j.runtime.beans.screens.FormScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.screens.FormScreen">
+                  <void property="subTitle">
+                    <string>Please note that all form fields are required.</string>
+                  </void>
+                  <void property="title">
+                    <string>Create Collaborator User</string>
+                  </void>
+                </object>
+              </java>
+            </serializedBean>
+            <condition>// if this is an unattended install, assume false and we'll skip making a first user (they can always use admin)
+if (context.isUnattended()) {
+    return false;
+}
+
+// we can assume at this point that if the path selected exists and contains files, this is an upgrade install
+// and hence, we should not display the option for setting up a first user.
+
+String installDirPath = (String)context.getVariable("sys.installationDir");
+File installDir = new File(installDirPath);
+if (installDir.exists() &amp;&amp; installDir.canRead() &amp;&amp; installDir.list().length &gt; 0 &amp;&amp; Arrays.asList(installDir.list()).contains("license.txt")) {
+   return false;
+}
+ 
+return true;</condition>
+            <validation>// if this is a silent install, assume there's nothing to validate and return true (see the conditional visibility script)
+if (context.isUnattended()) {
+    return true;
+}
+
+// the critical validations:
+String username = (String)context.getVariable("smartbear.initialuser.username");
+String password1 = (String)context.getVariable("smartbear.initialuser.password1");
+String password2 = (String)context.getVariable("smartbear.initialuser.password2");
+
+List&lt;String&gt; errors = new LinkedList&lt;String&gt;();
+if (username == null || username.trim().equals("")) {
+    errors.add("Username may not be blank.");
+}
+if (username.trim().equalsIgnoreCase("admin") || username.trim().equalsIgnoreCase("administrator")) { 
+    errors.add("Username may not be 'admin' or 'administrator'.  These are reserved for system accounts.");
+}
+if (password1 == null || password1.trim().equals("")) {
+    errors.add("Password may not be blank.");
+}
+if (password2 == null || !password2.equals(password1)) {
+    errors.add("Passwords do not match. Please check those fields and try again.");   
+}
+
+// less important, but still we should validate non-empty status:
+String name = (String)context.getVariable("smartbear.initialuser.name"); // their full name
+String company = (String)context.getVariable("smartbear.initialuser.company");
+String email = (String)context.getVariable("smartbear.initialuser.email");
+String phone = (String)context.getVariable("smartbear.initialuser.phone");
+
+if (name == null || name.trim().equals("")) {
+    errors.add("Full name may not be blank.");   
+}
+
+if (company == null || company.trim().equals("")) {
+    errors.add("Your company or organization's name may not be blank.");
+}
+
+if (email == null || email.trim().equals("")) {
+    errors.add("Your email address may not be blank.");
+}
+
+if (phone == null || phone.trim().equals("")) {
+    errors.add("Your phone number may not be blank.");
+}
+
+if (errors.isEmpty()) {
+    return true;
+} else {
+    StringBuilder sb = new StringBuilder();
+    sb.append("Please correct the following error" + (errors.size() &gt; 1 ? "s" : "") + ":\n");
+    for (String e : errors) {
+        sb.append("\t* " + e + "\n");
+    }
+    Util.showErrorMessage(sb.toString());
+    return false;
+}</validation>
+            <preActivation />
+            <postActivation />
+            <actions>
+              <action name="" id="18267" customizedId="" beanClass="com.smartbear.ccollab.installer.action.SaveFirstUserInfoAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="4" errorMessage="Unable to save the data for the first user.  Please ensure that your operating system's temporary files directory exists and is writable.">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.SaveFirstUserInfoAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+            </actions>
+            <formComponents>
+              <formComponent name="" id="18119" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.LabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.LabelComponent">
+                      <void property="labelText">
+                        <string>Please create your account for logging into the Collaborator server.</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+              <formComponent name="" id="18123" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                      <void property="labelText">
+                        <string>Company:</string>
+                      </void>
+                      <void property="requestFocus">
+                        <boolean>true</boolean>
+                      </void>
+                      <void property="variableName">
+                        <string>smartbear.initialuser.company</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+              <formComponent name="" id="18124" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                      <void property="labelText">
+                        <string>Full Name:</string>
+                      </void>
+                      <void property="variableName">
+                        <string>smartbear.initialuser.name</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+              <formComponent name="" id="18126" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                      <void property="labelText">
+                        <string>Email:</string>
+                      </void>
+                      <void property="variableName">
+                        <string>smartbear.initialuser.email</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+              <formComponent name="" id="18268" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                      <void property="labelText">
+                        <string>Phone:</string>
+                      </void>
+                      <void property="variableName">
+                        <string>smartbear.initialuser.phone</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+              <formComponent name="" id="18127" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                      <void property="inputVerifier">
+                        <object class="com.install4j.api.beans.ScriptProperty">
+                          <void property="value">
+                            <string />
+                          </void>
+                        </object>
+                      </void>
+                      <void property="labelText">
+                        <string>Username:</string>
+                      </void>
+                      <void property="variableName">
+                        <string>smartbear.initialuser.username</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+              <formComponent name="" id="18128" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.PasswordComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.PasswordComponent">
+                      <void property="inputVerifier">
+                        <object class="com.install4j.api.beans.ScriptProperty">
+                          <void property="value">
+                            <string />
+                          </void>
+                        </object>
+                      </void>
+                      <void property="labelText">
+                        <string>Password:</string>
+                      </void>
+                      <void property="variableName">
+                        <string>smartbear.initialuser.password1</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+              <formComponent name="" id="18129" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.PasswordComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.PasswordComponent">
+                      <void property="inputVerifier">
+                        <object class="com.install4j.api.beans.ScriptProperty">
+                          <void property="value">
+                            <string />
+                          </void>
+                        </object>
+                      </void>
+                      <void property="labelText">
+                        <string>Confirm Password:</string>
+                      </void>
+                      <void property="variableName">
+                        <string>smartbear.initialuser.password2</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+            </formComponents>
+          </screen>
+          <screen name="Install Type" id="16887" customizedId="" beanClass="com.install4j.runtime.beans.screens.FormScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="1" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.screens.FormScreen">
+                  <void property="subTitle">
+                    <string>Choose between simple and advanced installation</string>
+                  </void>
+                  <void property="title">
+                    <string>Choose Installation Type</string>
+                  </void>
+                </object>
+              </java>
+            </serializedBean>
+            <condition />
+            <validation />
+            <preActivation />
+            <postActivation />
+            <actions>
+              <action name="" id="17427" customizedId="" beanClass="com.smartbear.ccollab.installer.action.SetContextVariableAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.SetContextVariableAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="17428" customizedId="" beanClass="com.smartbear.ccollab.installer.action.SetServerVariableAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.SetServerVariableAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="17429" customizedId="" beanClass="com.smartbear.ccollab.installer.action.ConvertConfigToTomcat8Action" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.ConvertConfigToTomcat8Action" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="17430" customizedId="" beanClass="com.smartbear.ccollab.installer.action.SetDatabaseTypeVariableAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.SetDatabaseTypeVariableAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="17431" customizedId="" beanClass="com.smartbear.ccollab.installer.action.SetRealmTypeVariableAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.SetRealmTypeVariableAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+            </actions>
+            <formComponents>
+              <formComponent name="" id="16888" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.CheckboxComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.CheckboxComponent">
+                      <void property="checkboxText">
+                        <string>Configure Advanced Settings</string>
+                      </void>
+                      <void property="variableName">
+                        <string>smartbear.advanced.config</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+              <formComponent name="" id="16990" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                      <void property="labelHtml">
+                        <string>&lt;p&gt;${compiler:COMPANYNAME} recommends leaving this unselected if you are installing for the first time.&lt;/p&gt;
+
+&lt;p&gt;Select "Configure Advanced Settings" if you need to change installation directory, port number, authentication, or database configuration.&lt;/p&gt;
+
+&lt;p&gt;If you are performing an upgrade, unselecting "Configure Advanced Settings" will use your existing configuration as-is.&lt;/p&gt;</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+            </formComponents>
+          </screen>
+          <group name="Advanced Configuration" id="16880" customizedId="" beanClass="com.install4j.runtime.beans.groups.ScreenGroup" enabled="true" commentSet="false" comment="" actionElevationType="inherit">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.groups.ScreenGroup">
+                  <void property="conditionExpression">
+                    <object class="com.install4j.api.beans.ScriptProperty">
+                      <void property="value">
+                        <string>return (Boolean)context.getVariable("smartbear.advanced.config");</string>
+                      </void>
+                    </object>
+                  </void>
+                </object>
+              </java>
+            </serializedBean>
+            <beans>
+              <screen name="" id="18533" customizedId="" beanClass="com.install4j.runtime.beans.screens.InstallationDirectoryScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.screens.InstallationDirectoryScreen" />
+                  </java>
+                </serializedBean>
+                <condition>// unlike the earlier install directory screen possibility, if they've selected advanced config options, always display this one
+return true;</condition>
+                <validation />
+                <preActivation />
+                <postActivation />
+                <actions>
+                  <action name="" id="18534" customizedId="" beanClass="com.smartbear.ccollab.installer.action.RegisterAdvancedConfigsChosenAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.smartbear.ccollab.installer.action.RegisterAdvancedConfigsChosenAction" />
+                      </java>
+                    </serializedBean>
+                    <condition />
+                  </action>
+                </actions>
+                <formComponents />
+              </screen>
+              <screen name="WebserverMemoryAlloc" id="18713" customizedId="" beanClass="com.install4j.runtime.beans.screens.FormScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.screens.FormScreen">
+                      <void property="subTitle">
+                        <string>Memory Configuration Screen</string>
+                      </void>
+                      <void property="title">
+                        <string>Configure Webserver</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition />
+                <validation>return com.smartbear.ccollab.installer.ServerConfigurationUtils.validateMemoryAvailable( 
+    context
+);</validation>
+                <preActivation />
+                <postActivation />
+                <actions />
+                <formComponents>
+                  <formComponent name="" id="18843" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.LabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.LabelComponent">
+                          <void property="labelText">
+                            <string>We recommend to allocate at least 50% of available RAM in order to have high Collaborator performance</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="18845" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.LabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.LabelComponent">
+                          <void property="labelText">
+                            <string>Text</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>Long freeMemorySize = com.smartbear.ccollab.installer.ServerConfigurationUtils.getFreeMemorySize();
+configurationObject.setText("Free RAM: " + freeMemorySize + " MB");
+</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="18844" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.LabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.LabelComponent">
+                          <void property="labelText">
+                            <string>Text</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>Long recommendedMemorySize = com.smartbear.ccollab.installer.ServerConfigurationUtils.getRecommendedMemorySize();
+configurationObject.setText("Min recommended RAM: " + recommendedMemorySize + " MB");
+</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="memory" id="18714" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="true">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>return true;</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Memory Allocation Size (MB):</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.webserver.xms.memory</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>String memoryAllocSize = (String) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.WEBSERVER_XMS_MEMORY );
+if ( memoryAllocSize != null &amp;&amp; memoryAllocSize.length() &gt; 0 ) { return; }
+
+Long memoryAlloc = com.smartbear.ccollab.installer.ServerConfigurationUtils.getMemoryAllocSize( context );
+
+configurationObject.setText(memoryAlloc == null ? "" : memoryAlloc.toString());
+</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="18715" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.SpacerComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.SpacerComponent" />
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="18716" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.LabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.LabelComponent">
+                          <void property="labelText">
+                            <string>* Indicates required field</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                </formComponents>
+              </screen>
+              <screen name="Webserver" id="12330" customizedId="" beanClass="com.install4j.runtime.beans.screens.FormScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.screens.FormScreen">
+                      <void property="subTitle">
+                        <string>Configure the basic webserver settings.</string>
+                      </void>
+                      <void property="title">
+                        <string>Configure Webserver</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition />
+                <validation>return com.smartbear.ccollab.installer.ServerConfigurationUtils.validatePortAvailable( 
+    context
+);</validation>
+                <preActivation />
+                <postActivation />
+                <actions />
+                <formComponents>
+                  <formComponent name="port" id="13405" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="true">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>return true;// input is validated in com.smartbear.ccollab.installer.ServerConfigurationUtils.validatePortAvailable();</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Port:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.webserver.port</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>String port = (String) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.WEBSERVER_PORT );
+if ( port != null &amp;&amp; port.length() &gt; 0 ) 
+{
+    // configurationObject.setText( port );
+    return;
+}
+
+org.w3c.dom.Document serverDocument =  (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.SERVER_DOCUMENT );
+Long serverPort = com.smartbear.ccollab.installer.ServerConfigurationUtils.getServerPort( serverDocument );
+
+configurationObject.setText( serverPort.toString() );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="12332" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.SpacerComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.SpacerComponent" />
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="12333" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.LabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.LabelComponent">
+                          <void property="labelText">
+                            <string>* Indicates required field</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                </formComponents>
+              </screen>
+              <screen name="Database Type Selection" id="460" customizedId="" beanClass="com.install4j.runtime.beans.screens.FormScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="1" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.screens.FormScreen">
+                      <void property="subTitle">
+                        <string>What type of database will hold the ${compiler:PRODUCTNAME} data?</string>
+                      </void>
+                      <void property="title">
+                        <string>Database Type</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition />
+                <validation />
+                <preActivation />
+                <postActivation />
+                <actions>
+                  <action name="" id="14827" customizedId="" beanClass="com.smartbear.ccollab.installer.action.ConfigureEmbeddedDatabaseAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="1" errorMessage="">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.smartbear.ccollab.installer.action.ConfigureEmbeddedDatabaseAction" />
+                      </java>
+                    </serializedBean>
+                    <condition>((Integer)context.getVariable( "smartbear.dbtype" )).intValue() == 0</condition>
+                  </action>
+                </actions>
+                <formComponents>
+                  <formComponent name="" id="462" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.RadiobuttonsComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.RadiobuttonsComponent">
+                          <void property="labelText">
+                            <string>Database Type</string>
+                          </void>
+                          <void property="radioButtonLabels">
+                            <array class="java.lang.String" length="5">
+                              <void index="0">
+                                <string>Embedded</string>
+                              </void>
+                              <void index="1">
+                                <string>MySQL</string>
+                              </void>
+                              <void index="2">
+                                <string>SQL Server</string>
+                              </void>
+                              <void index="3">
+                                <string>Oracle</string>
+                              </void>
+                              <void index="4">
+                                <string>Existing Configuration</string>
+                              </void>
+                            </array>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.dbtype</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>boolean isUpgrade = context.getBooleanVariable( "smartbear.upgrade" );
+
+int index = 0;
+Enumeration en = configurationObject.getElements();
+while ( en.hasMoreElements() )
+{
+    JRadioButton button = (JRadioButton) en.nextElement();
+    if ( isUpgrade )
+    {
+        if ( index == 4 )
+        {
+            button.setSelected( true );
+        }
+    }
+    else
+    {
+        if ( index == 0 )
+        {
+            button.setSelected( true );    
+        }
+        else if ( index == 4 )
+        {
+            button.setEnabled( false );
+        }
+    }
+    
+    index++;
+}
+
+return;</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="17582" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                          <void property="labelHtml">
+                            <string>&lt;B&gt;Note:&lt;/B&gt;&lt;br&gt;
+If you wish to install Collaborator Community, you may only use the embedded database.&lt;br&gt;
+If you wish to install Collaborator Team, you may only use the embedded database or MySQL.&lt;br&gt;
+If you wish to install Collaborator Enterprise, you may use any database.</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="14876" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.MultilineLabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.MultilineLabelComponent">
+                          <void property="labelText">
+                            <string>Migration tools are available for migrating ${compiler:PRODUCTNAME} data between all of the supported databases.</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                </formComponents>
+              </screen>
+              <screen name="MySQL Configuration" id="463" customizedId="" beanClass="com.install4j.runtime.beans.screens.FormScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="1" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.screens.FormScreen">
+                      <void property="subTitle">
+                        <string>Configuration for the MySQL database that will store the ${compiler:PRODUCTNAME} data.</string>
+                      </void>
+                      <void property="title">
+                        <string>MySQL Configuration</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition>((Integer)context.getVariable( "smartbear.dbtype" )).intValue() == 1</condition>
+                <validation>com.smartbear.ccollab.installer.MysqlConfigurationUtils.validateDatabaseConnection( context )</validation>
+                <preActivation />
+                <postActivation />
+                <actions>
+                  <action name="" id="2332" customizedId="" beanClass="com.smartbear.ccollab.installer.action.ConfigureMysqlAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="1" errorMessage="">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.smartbear.ccollab.installer.action.ConfigureMysqlAction" />
+                      </java>
+                    </serializedBean>
+                    <condition />
+                  </action>
+                </actions>
+                <formComponents>
+                  <formComponent name="hostname" id="464" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>( text.length() &gt; 0 &amp;&amp; text.indexOf( ' ' ) == -1 )</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="keyValidator">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string />
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Hostname:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.mysql.host</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.MysqlConfigurationUtils.getHostname( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="port" id="1079" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>try
+{
+    int port = Integer.parseInt( text );
+    if ( port &gt;= 1 &amp;&amp; port &lt;= 65535 )
+        return true;
+}
+catch ( NumberFormatException nfe ) {}
+Util.showErrorMessage("You must enter a port number between 1 and 65535. (MySQL default is 3306.)");
+return false;</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="keyValidator">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string />
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Port:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.mysql.port</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.MysqlConfigurationUtils.getPort( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="schema" id="1080" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>( text.length() &gt; 0 &amp;&amp; text.indexOf( ' ' ) == -1 &amp;&amp; ( ! "mysql".equalsIgnoreCase( text ) ) )</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Schema:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.mysql.schema</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.MysqlConfigurationUtils.getSchema( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="username" id="1081" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>text.length() &gt; 0</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Username:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.mysql.username</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.MysqlConfigurationUtils.getUsername( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="password" id="7225" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.PasswordComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.PasswordComponent">
+                          <void property="labelText">
+                            <string>Password:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.mysql.password</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.MysqlConfigurationUtils.getPassword( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="1899" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.SpacerComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.SpacerComponent" />
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="16592" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                          <void property="labelHtml">
+                            <string>&lt;html&gt;
+* indicates a required field.
+&lt;p&gt;
+&lt;b&gt;&lt;font color="red"&gt;NOTICE:&lt;/font&gt;&lt;/b&gt; Due to licensing restrictions, you must download MySQL database drivers yourself. More information about configuring MySQL with ${compiler:PRODUCTNAME} is
+available in the 
+&lt;a href="http://support.smartbear.com/viewarticle/66580/"&gt;Owner's Manual&lt;/a&gt;.
+&lt;/html&gt;</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                </formComponents>
+              </screen>
+              <screen name="SQL Server Configuration" id="469" customizedId="" beanClass="com.install4j.runtime.beans.screens.FormScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="1" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.screens.FormScreen">
+                      <void property="subTitle">
+                        <string>Configuration for the SQL Server database that will store the ${compiler:PRODUCTNAME} data.</string>
+                      </void>
+                      <void property="title">
+                        <string>SQL Server Configuration</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition>((Integer)context.getVariable( "smartbear.dbtype" )).intValue() == 2</condition>
+                <validation>//return com.smartbear.ccollab.installer.SqlServerConfigurationUtils.validateDatabaseConnection( context );
+return true;</validation>
+                <preActivation />
+                <postActivation />
+                <actions>
+                  <action name="" id="2333" customizedId="" beanClass="com.smartbear.ccollab.installer.action.ConfigureSqlServerAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="1" errorMessage="">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.smartbear.ccollab.installer.action.ConfigureSqlServerAction" />
+                      </java>
+                    </serializedBean>
+                    <condition />
+                  </action>
+                </actions>
+                <formComponents>
+                  <formComponent name="hostname" id="1084" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>( text.length() &gt; 0 &amp;&amp; text.indexOf( ' ' ) == -1 )</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="keyValidator">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string />
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Hostname:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.mssql.host</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.SqlServerConfigurationUtils.getHostname( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="port" id="1085" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>try
+{
+    int port = Integer.parseInt( text );
+    if ( port &gt;= 1 &amp;&amp; port &lt;= 65535 )
+        return true;
+}
+catch ( NumberFormatException nfe ) {}
+Util.showErrorMessage("You must enter a port number between 1 and 65535. (SQL Server default is 1433.)");
+return false;</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="keyValidator">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string />
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Port:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.mssql.port</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.SqlServerConfigurationUtils.getPort( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="schema" id="1086" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>( text.length() &gt; 0 &amp;&amp; text.indexOf( ' ' ) == -1 &amp;&amp; ( ! "mysql".equalsIgnoreCase( text ) ) )</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Schema:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.mssql.schema</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.SqlServerConfigurationUtils.getSchema( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="username" id="1087" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>text.length() &gt; 0</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Username:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.mssql.username</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.SqlServerConfigurationUtils.getUsername( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="password" id="7224" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.PasswordComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.PasswordComponent">
+                          <void property="labelText">
+                            <string>Password:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.mssql.password</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.SqlServerConfigurationUtils.getPassword( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="1898" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.SpacerComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.SpacerComponent" />
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="16593" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                          <void property="labelHtml">
+                            <string>&lt;html&gt;
+* indicates a required field.
+&lt;p&gt;
+&lt;b&gt;&lt;font color="red"&gt;NOTICE:&lt;/font&gt;&lt;/b&gt; Due to licensing restrictions, you must download JDBC database drivers directly from Microsoft. More information about configuring SQL Server with ${compiler:PRODUCTNAME} is
+available in the 
+&lt;a href="http://support.smartbear.com/viewarticle/66583/"&gt;Owner's Manual&lt;/a&gt;.
+&lt;/html&gt;</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                </formComponents>
+              </screen>
+              <screen name="Oracle Configuration" id="14941" customizedId="" beanClass="com.install4j.runtime.beans.screens.FormScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="1" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.screens.FormScreen">
+                      <void property="subTitle">
+                        <string>Configuration for the Oracle database that will store the ${compiler:PRODUCTNAME} data.</string>
+                      </void>
+                      <void property="title">
+                        <string>Oracle Configuration</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition>((Integer)context.getVariable( "smartbear.dbtype" )).intValue() == 3</condition>
+                <validation>//return com.smartbear.ccollab.installer.OracleConfigurationUtils.validateDatabaseConnection( context );
+return true;</validation>
+                <preActivation />
+                <postActivation />
+                <actions>
+                  <action name="" id="14950" customizedId="" beanClass="com.smartbear.ccollab.installer.action.ConfigureOracleAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.smartbear.ccollab.installer.action.ConfigureOracleAction" />
+                      </java>
+                    </serializedBean>
+                    <condition />
+                  </action>
+                </actions>
+                <formComponents>
+                  <formComponent name="hostname" id="14942" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>( text.length() &gt; 0 &amp;&amp; text.indexOf( ' ' ) == -1 )</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="keyValidator">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string />
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Hostname:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.oracle.host</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.OracleConfigurationUtils.getHostname( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="port" id="14943" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>try
+{
+    int port = Integer.parseInt( text );
+    if ( port &gt;= 1 &amp;&amp; port &lt;= 65535 )
+        return true;
+}
+catch ( NumberFormatException nfe ) {}
+Util.showErrorMessage("You must enter a port number between 1 and 65535. (Oracle default is 1521.)");
+return false;
+</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="keyValidator">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string />
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Port:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.oracle.port</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.OracleConfigurationUtils.getPort( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="schema" id="14944" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>( text.length() &gt; 0 &amp;&amp; text.indexOf( ' ' ) == -1 &amp;&amp; ( ! "mysql".equalsIgnoreCase( text ) ) )</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Database Service Name:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.oracle.schema</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.OracleConfigurationUtils.getSchema( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="username" id="14945" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>text.length() &gt; 0</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Username:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.oracle.username</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.OracleConfigurationUtils.getUsername( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="password" id="14946" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.PasswordComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.PasswordComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>text.length() &gt; 0</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Password:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.oracle.password</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.OracleConfigurationUtils.getPassword( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="14947" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.SpacerComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.SpacerComponent" />
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="16594" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                          <void property="labelHtml">
+                            <string>&lt;html&gt;
+* indicates a required field.
+&lt;p&gt;
+More information about configuring Oracle with ${compiler:PRODUCTNAME} is
+available in the 
+&lt;a href="http://support.smartbear.com/viewarticle/66582/"&gt;Owner's Manual&lt;/a&gt;.
+&lt;/html&gt;</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                </formComponents>
+              </screen>
+              <screen name="Authentication Type Selection" id="7226" customizedId="" beanClass="com.install4j.runtime.beans.screens.FormScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="1" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.screens.FormScreen">
+                      <void property="subTitle">
+                        <string>What type of authentication do you want ${compiler:PRODUCTNAME} to perform?</string>
+                      </void>
+                      <void property="title">
+                        <string>Authentication Type</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition />
+                <validation />
+                <preActivation />
+                <postActivation />
+                <actions>
+                  <action name="" id="7843" customizedId="" beanClass="com.smartbear.ccollab.installer.action.ConfigureCollaboratorAuthenticationAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="3" errorMessage="">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.smartbear.ccollab.installer.action.ConfigureCollaboratorAuthenticationAction" />
+                      </java>
+                    </serializedBean>
+                    <condition>return ((Integer) context.getVariable( "smartbear.authentication.type" )).intValue() == 0;</condition>
+                  </action>
+                  <action name="" id="16451" customizedId="" beanClass="com.smartbear.ccollab.installer.action.EnsureDatabaseConnectionTestOnBorrowAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="3" errorMessage="">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.smartbear.ccollab.installer.action.EnsureDatabaseConnectionTestOnBorrowAction" />
+                      </java>
+                    </serializedBean>
+                    <condition />
+                  </action>
+                </actions>
+                <formComponents>
+                  <formComponent name="" id="7227" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.RadiobuttonsComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.RadiobuttonsComponent">
+                          <void property="radioButtonLabels">
+                            <array class="java.lang.String" length="4">
+                              <void index="0">
+                                <string>Internal authentication.</string>
+                              </void>
+                              <void index="1">
+                                <string>LDAP (Bind) authentication.</string>
+                              </void>
+                              <void index="2">
+                                <string>Active Directory (Search) authentication.</string>
+                              </void>
+                              <void index="3">
+                                <string>Existing authentication configuration.</string>
+                              </void>
+                            </array>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.authentication.type</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>int desiredIndex = ((Integer) context.getVariable( "smartbear.authentication.type" )).intValue();
+
+boolean alreadyConfigured = context.getBooleanVariable( "smartbear.ldap.already.configured" );
+if (alreadyConfigured)
+    desiredIndex = 3; //existing configuration
+    
+int index = 0;
+Enumeration en = configurationObject.getElements();
+while ( en.hasMoreElements() )
+{
+    JRadioButton button = (JRadioButton) en.nextElement();
+    if ( index == desiredIndex )
+    {
+        button.setSelected( true );
+    }
+    
+    //existing config option
+    if (index == 3)
+    {
+        button.setEnabled(alreadyConfigured);
+    }
+    
+    index++;
+}
+
+return;</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="17583" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                          <void property="labelHtml">
+                            <string>&lt;B&gt;Note:&lt;/B&gt; Collaborator Community edition only supports internal authentication.</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                </formComponents>
+              </screen>
+              <screen name="LDAP Configuration" id="7228" customizedId="" beanClass="com.install4j.runtime.beans.screens.FormScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="1" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.screens.FormScreen">
+                      <void property="subTitle">
+                        <string>How will ${compiler:PRODUCTNAME} connect to LDAP?</string>
+                      </void>
+                      <void property="title">
+                        <string>Configure LDAP Authentication</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition>((Integer) context.getVariable( "smartbear.authentication.type" )).intValue() == 1</condition>
+                <validation>return com.smartbear.ccollab.installer.ServerConfigurationUtils.validateLDAPConfiguration(
+    context
+);</validation>
+                <preActivation />
+                <postActivation />
+                <actions>
+                  <action name="" id="7844" customizedId="" beanClass="com.smartbear.ccollab.installer.action.ConfigureLdapAuthenticationAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="1" errorMessage="">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.smartbear.ccollab.installer.action.ConfigureLdapAuthenticationAction" />
+                      </java>
+                    </serializedBean>
+                    <condition>((Integer) context.getVariable( "smartbear.authentication.type" )).intValue() == 1</condition>
+                  </action>
+                  <action name="" id="16424" customizedId="" beanClass="com.smartbear.ccollab.installer.action.ConfigureSystemAdministratorActon" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="1" errorMessage="">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.smartbear.ccollab.installer.action.ConfigureSystemAdministratorActon" />
+                      </java>
+                    </serializedBean>
+                    <condition>((Integer) context.getVariable( "smartbear.authentication.type" )).intValue() == 1</condition>
+                  </action>
+                </actions>
+                <formComponents>
+                  <formComponent name="url" id="7229" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>text != null &amp;&amp; text.length() &gt; 0</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* LDAP Connection URL:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.ldap.url</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.LdapConfigurationUtils.getUrl( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) )</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="ldap pattern" id="7230" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="labelText">
+                            <string>* User Pattern:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.ldap.pattern</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.LdapConfigurationUtils.getUserPattern( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) )</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="7232" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.MultilineLabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.MultilineLabelComponent">
+                          <void property="labelText">
+                            <string>When using LDAP authentication, ${compiler:PRODUCTNAME} requires one user be designated the System Administrator.  This user will be allowed to login to administer the system even when it is unlicensed.</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="admin" id="7233" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="labelText">
+                            <string>* System Administrator:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.system.administrator</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.LdapConfigurationUtils.getSystemAdministrator( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) )</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="Test Password" id="17678" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.PasswordComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.PasswordComponent">
+                          <void property="labelText">
+                            <string>* Administrator Password</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.ldap.admin.password</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="16595" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                          <void property="labelHtml">
+                            <string>&lt;html&gt;
+* indicates a required field.
+&lt;p&gt;
+More information about configuring LDAP with ${compiler:PRODUCTNAME} is
+available in the 
+&lt;a href="http://support.smartbear.com/viewarticle/66348/"&gt;Owner's Manual&lt;/a&gt;.
+&lt;/html&gt;</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                </formComponents>
+              </screen>
+              <screen name="Active Directory Configuration" id="17676" customizedId="" beanClass="com.install4j.runtime.beans.screens.FormScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="1" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.screens.FormScreen">
+                      <void property="subTitle">
+                        <string>How will ${compiler:PRODUCTNAME} connect to Active Directory?</string>
+                      </void>
+                      <void property="title">
+                        <string>Configure Active Directory Authentication</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition>((Integer) context.getVariable( "smartbear.authentication.type" )).intValue() == 2</condition>
+                <validation>return com.smartbear.ccollab.installer.ServerConfigurationUtils.validateADConfiguration(
+    context
+);</validation>
+                <preActivation />
+                <postActivation />
+                <actions>
+                  <action name="" id="17751" customizedId="" beanClass="com.smartbear.ccollab.installer.action.ConfigureActiveDirectoryAuthenticationAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="1" errorMessage="">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.smartbear.ccollab.installer.action.ConfigureActiveDirectoryAuthenticationAction" />
+                      </java>
+                    </serializedBean>
+                    <condition>((Integer) context.getVariable( "smartbear.authentication.type" )).intValue() == 2</condition>
+                  </action>
+                  <action name="" id="17691" customizedId="" beanClass="com.smartbear.ccollab.installer.action.ConfigureSystemAdministratorActon" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="true" failureStrategy="1" errorMessage="">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.smartbear.ccollab.installer.action.ConfigureSystemAdministratorActon" />
+                      </java>
+                    </serializedBean>
+                    <condition>((Integer) context.getVariable( "smartbear.authentication.type" )).intValue() == 2</condition>
+                  </action>
+                </actions>
+                <formComponents>
+                  <formComponent name="connectionUrl" id="17680" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string />
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Connection URL:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.ldap.url</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.LdapConfigurationUtils.getUrl( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) )</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="connectionName" id="17688" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string />
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>* Connection User:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.ldap.username</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.LdapConfigurationUtils.getConnectionName( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) )</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="connectionPassword" id="17684" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.PasswordComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.PasswordComponent">
+                          <void property="labelText">
+                            <string>* Connection Password</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.ldap.password</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.LdapConfigurationUtils.getConnectionPassword( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) )</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="userBase" id="17681" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="labelText">
+                            <string>* User Base:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.ldap.base</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.LdapConfigurationUtils.getUserBase( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) )</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="userSearch" id="17687" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="labelText">
+                            <string>* User Search:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.ldap.search</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.LdapConfigurationUtils.getUserSearch( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) )</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="Admin Explanation" id="17682" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.MultilineLabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.MultilineLabelComponent">
+                          <void property="labelText">
+                            <string>When using Active Directory authentication, ${compiler:PRODUCTNAME} requires one user be designated the System Administrator.  This user will be allowed to login to administer the system even when it is unlicensed.</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="admin" id="17683" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="labelText">
+                            <string>* System Administrator:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.system.administrator</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.LdapConfigurationUtils.getSystemAdministrator( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) )</initScript>
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="17686" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                          <void property="labelHtml">
+                            <string>&lt;html&gt;
+* indicates a required field.
+&lt;p&gt;
+More information about configuring Active Directory and LDAP with ${compiler:PRODUCTNAME} is
+available in the 
+&lt;a href="http://support.smartbear.com/viewarticle/66348/"&gt;Owner's Manual&lt;/a&gt;.
+&lt;/html&gt;</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                </formComponents>
+              </screen>
+              <screen name="Simultaneous users configuration" id="18274" customizedId="" beanClass="com.install4j.runtime.beans.screens.FormScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.screens.FormScreen">
+                      <void property="subTitle">
+                        <string>Optional configuration of system parameters based on expected number of simultaneous users</string>
+                      </void>
+                      <void property="title">
+                        <string>Simultaneous Users Configuration</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition />
+                <validation />
+                <preActivation />
+                <postActivation />
+                <actions />
+                <formComponents>
+                  <formComponent name="" id="18275" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                          <void property="labelHtml">
+                            <string>&lt;p&gt;This page allows you to pre-configure some commonly used parameters 
+to adapt the system better to larger numbers of simultaneous
+users.  Please enter below the number of users you expect to use
+the system simultaneously; you may also skip this step if you are unsure
+or do not wish to update your system's configuration.&lt;/p&gt;
+&lt;p&gt;You may also wish to consult our &lt;a href="http://smartbear.com/product/collaborator/specifications"&gt;documentation about recommended
+hardware configurations&lt;/a&gt; to support larger numbers of simultaneous users.&lt;/p&gt;
+</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                  <formComponent name="" id="18276" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.TextfieldComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                    <serializedBean>
+                      <java class="java.beans.XMLDecoder">
+                        <object class="com.install4j.runtime.beans.formcomponents.TextfieldComponent">
+                          <void property="inputVerifier">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string />
+                              </void>
+                            </object>
+                          </void>
+                          <void property="keyValidator">
+                            <object class="com.install4j.api.beans.ScriptProperty">
+                              <void property="value">
+                                <string>return Character.isDigit(keyChar);</string>
+                              </void>
+                            </object>
+                          </void>
+                          <void property="labelText">
+                            <string>Number of expected simultaneous users:</string>
+                          </void>
+                          <void property="variableName">
+                            <string>smartbear.expectedconcurrentusers</string>
+                          </void>
+                        </object>
+                      </java>
+                    </serializedBean>
+                    <initScript />
+                    <visibilityScript />
+                  </formComponent>
+                </formComponents>
+              </screen>
+            </beans>
+          </group>
+          <screen name="" id="238" customizedId="" beanClass="com.install4j.runtime.beans.screens.InstallationScreen" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="true" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.screens.InstallationScreen" />
+              </java>
+            </serializedBean>
+            <condition />
+            <validation />
+            <preActivation />
+            <postActivation />
+            <actions>
+              <action name="" id="17533" customizedId="" beanClass="com.smartbear.ccollab.installer.action.UpdatePeerReviewComponentsAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.UpdatePeerReviewComponentsAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="16832" customizedId="" beanClass="com.install4j.runtime.beans.actions.services.StopServiceAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="3" errorMessage="Could not stop service. You may need to stop the service manually before continuing the installation process.">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.services.StopServiceAction">
+                      <void property="launcherId">
+                        <string>2</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition>File serverXml = new File(context.getInstallationDirectory(), "tomcat/conf/server.xml");
+if (serverXml != null &amp;&amp; serverXml.exists()) {
+    Long currentPort = com.smartbear.ccollab.installer.ServerConfigurationUtils.getServerPort(serverXml);
+    // not available means we need to stop the service
+    return currentPort != null &amp;&amp; !com.smartbear.ccollab.installer.ServerConfigurationUtils.portIsAvailable(currentPort.intValue());
+}
+return false; // no need to stop
+
+</condition>
+              </action>
+              <action name="" id="16785" customizedId="" beanClass="com.install4j.runtime.beans.actions.control.RunScriptAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="2" errorMessage="${compiler:PRODUCTNAME} is still running.  You may have to shut down the service manually, or you may\nbe installing over a different ${compiler:PRODUCTNAME} instance.  Resolve this, then run the installer again.">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.control.RunScriptAction">
+                      <void property="script">
+                        <object class="com.install4j.api.beans.ScriptProperty">
+                          <void property="value">
+                            <string>final int waitPeriod = 1000; //1 second wait
+final int maxRetries = 10;
+
+//install4j has no way to enumerate the files to be installed, so hardcode the first one in the file list
+final File testFile = new File(context.getInstallationDirectory(), "tomcat/bin/bootstrap.jar");
+
+//test whether we're able to exclusively write the file by attempting to delete it.  note that
+//canWrite() and other attempts to determine if the file is locked by another process aren't reliable
+if (!testFile.exists() || testFile.delete())
+    return true;
+
+String statusMsg =  "Waiting for ${compiler:PRODUCTNAME} shutdown"; 
+for (int retry = 0; retry++ &lt; maxRetries;) {
+    statusMsg += ".";
+    context.getProgressInterface().setStatusMessage(statusMsg);
+    Util.logInfo(null, "Wait for tomcat shutown retry #" + retry);
+    //give tomcat a chance to shutdown
+    Thread.sleep(waitPeriod);
+    if (testFile.delete())
+        return true;
+}
+
+//cannot write the target tomcat file.  either tomcat has not shut down, or perhaps we are
+//installing into the directory of a different tomcat instance.  warn the user
+Util.logError(null, "Cannot access " + testFile + ".  Aborting install.");
+return false;</string>
+                          </void>
+                        </object>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="Clean-up work and webapps/ROOT" id="17922" customizedId="" beanClass="com.install4j.runtime.beans.actions.files.DeleteFileAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.files.DeleteFileAction">
+                      <void property="backupForRollback">
+                        <boolean>false</boolean>
+                      </void>
+                      <void property="files">
+                        <array class="java.io.File" length="2">
+                          <void index="0">
+                            <object class="java.io.File">
+                              <string>tomcat/work</string>
+                            </object>
+                          </void>
+                          <void index="1">
+                            <object class="java.io.File">
+                              <string>tomcat/webapps/ROOT</string>
+                            </object>
+                          </void>
+                        </array>
+                      </void>
+                      <void property="recursive">
+                        <boolean>true</boolean>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="Delete old Oracle driver in shared lib (tomcat/lib/ojdbc5.jar)" id="18658" customizedId="" beanClass="com.install4j.runtime.beans.actions.files.DeleteFileAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.files.DeleteFileAction">
+                      <void property="files">
+                        <array class="java.io.File" length="1">
+                          <void index="0">
+                            <object class="java.io.File">
+                              <string>tomcat/lib/ojdbc5.jar</string>
+                            </object>
+                          </void>
+                        </array>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition>String installDirPath = context.getInstallationDirectory().getPath();
+String oldOracleJarPath = installDirPath + File.separator + "tomcat" + File.separator + "lib" + File.separator + "ojdbc5.jar";
+File oldOracleJar = new File(oldOracleJarPath);
+return oldOracleJar.exists();</condition>
+              </action>
+              <action name="Check config files" id="17923" customizedId="" beanClass="com.install4j.runtime.beans.actions.control.RunScriptAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="2" errorMessage="Multiple xml files found in ${installer:sys.installationDir}/tomcat/conf/Catalina/localhost. This directory should have only one file (ROOT.xml)">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.control.RunScriptAction">
+                      <void property="script">
+                        <object class="com.install4j.api.beans.ScriptProperty">
+                          <void property="value">
+                            <string>File installDir = context.getInstallationDirectory();
+File contextDir = new File(installDir, "tomcat/conf/Catalina/localhost");
+if (contextDir == null || !contextDir.exists()) {
+    return true; // no need to check
+}
+FileFilter ff = new FileFilter() {
+    public boolean accept(File f) {
+        return f.getName().endsWith(".xml");
+    }
+};
+
+File[] list = contextDir.listFiles(ff);
+return list != null &amp;&amp; list.length &lt;= 1;</string>
+                          </void>
+                        </object>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="239" customizedId="" beanClass="com.install4j.runtime.beans.actions.InstallFilesAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="2" errorMessage="${i18n:FileCorrupted}">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.InstallFilesAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="16533" customizedId="" beanClass="com.install4j.runtime.beans.actions.misc.AddVmOptionsAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.misc.AddVmOptionsAction">
+                      <void property="launcherId">
+                        <string>2</string>
+                      </void>
+                      <void property="vmOptions">
+                        <array class="java.lang.String" length="2">
+                          <void index="0">
+                            <string>-Djava.awt.headless=true</string>
+                          </void>
+                          <void index="1">
+                            <string>-Dorg.apache.catalina.loader.WebappClassLoader.ENABLE_CLEAR_REFERENCES=false</string>
+                          </void>
+                        </array>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="15017" customizedId="" beanClass="com.smartbear.ccollab.installer.action.UpdateRememberMeValveAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.UpdateRememberMeValveAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="16699" customizedId="" beanClass="com.smartbear.ccollab.installer.action.ConfigureFormLoginAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.ConfigureFormLoginAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="16740" customizedId="" beanClass="com.smartbear.ccollab.installer.action.ConfigureTicketLoginAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.ConfigureTicketLoginAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="16553" customizedId="" beanClass="com.smartbear.ccollab.installer.action.ConfigureClientCompatibilityAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.ConfigureClientCompatibilityAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="14924" customizedId="" beanClass="com.smartbear.ccollab.installer.action.ConfigureDatabaseMigrationParameterAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.ConfigureDatabaseMigrationParameterAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="10915" customizedId="" beanClass="com.smartbear.ccollab.installer.action.ServerConfigurationAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.ServerConfigurationAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="5566" customizedId="" beanClass="com.smartbear.ccollab.installer.action.SaveContextFileAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.SaveContextFileAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="10901" customizedId="" beanClass="com.smartbear.ccollab.installer.action.RemoveWebAppAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.RemoveWebAppAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="240" customizedId="" beanClass="com.install4j.runtime.beans.actions.desktop.CreateProgramGroupAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.desktop.CreateProgramGroupAction">
+                      <void property="uninstallerMenuName">
+                        <string>${i18n:UninstallerMenuEntry(${compiler:sys.fullName})}</string>
+                      </void>
+                      <void property="unixSymlinks">
+                        <boolean>false</boolean>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition>!context.getBooleanVariable("sys.programGroupDisabled")</condition>
+              </action>
+              <action name="" id="241" customizedId="" beanClass="com.install4j.runtime.beans.actions.desktop.RegisterAddRemoveAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.desktop.RegisterAddRemoveAction">
+                      <void property="itemName">
+                        <string>${compiler:sys.fullName} ${compiler:sys.version}</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="242" customizedId="" beanClass="com.install4j.runtime.beans.actions.services.InstallServiceAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.services.InstallServiceAction">
+                      <void property="description">
+                        <string>${compiler:PRODUCTNAME} web GUI and web services server</string>
+                      </void>
+                      <void property="launcherId">
+                        <string>2</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="243" customizedId="" beanClass="com.install4j.runtime.beans.actions.services.StartServiceAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="${compiler:PRODUCTNAME} service failed to start.">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.services.StartServiceAction">
+                      <void property="launcherId">
+                        <string>2</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition>context.getVariable( "smartbear.service.nostart" ) == null</condition>
+              </action>
+            </actions>
+            <formComponents />
+          </screen>
+          <screen name="" id="244" customizedId="" beanClass="com.install4j.runtime.beans.screens.FinishedScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="true" wizardIndexChangeType="unchanged" wizardIndexKey="">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.screens.FinishedScreen">
+                  <void property="bannerBackground">
+                    <object class="java.awt.Color">
+                      <int>255</int>
+                      <int>255</int>
+                      <int>255</int>
+                      <int>255</int>
+                    </object>
+                  </void>
+                  <void property="bannerImageFile">
+                    <object class="com.install4j.api.beans.ExternalFile">
+                      <string>./banner.png</string>
+                    </object>
+                  </void>
+                </object>
+              </java>
+            </serializedBean>
+            <condition />
+            <validation />
+            <preActivation />
+            <postActivation />
+            <actions>
+              <action name="" id="18117" customizedId="" beanClass="com.smartbear.ccollab.installer.action.RegisterInstallCompletionAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.RegisterInstallCompletionAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="17981" customizedId="" beanClass="com.smartbear.ccollab.installer.action.OpenCollaboratorUrlAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.smartbear.ccollab.installer.action.OpenCollaboratorUrlAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+            </actions>
+            <formComponents>
+              <formComponent name="" id="16670" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.formcomponents.MultilineHtmlLabelComponent">
+                      <void property="labelHtml">
+                        <string>&lt;p&gt;Thank you for installing Collaborator!&lt;/p&gt;
+&lt;p&gt;Collaborator will automatically launch your web browser after clicking 'Finish'.&lt;/p&gt;
+
+&lt;h3&gt;Collaborator Server URL: &lt;a href="http://127.0.0.1:${installer:smartbear.webserver.port}"&gt;http://127.0.0.1:${installer:smartbear.webserver.port}&lt;/a&gt;&lt;/h3&gt;</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <initScript />
+                <visibilityScript />
+              </formComponent>
+            </formComponents>
+          </screen>
+        </screens>
+      </application>
+      <application name="" id="uninstaller" customizedId="" beanClass="com.install4j.runtime.beans.applications.UninstallerApplication" enabled="true" commentSet="false" comment="" actionElevationType="elevated" fileset="" customIcnsFile="" customIcoFile="" macEntitlementsFile="" automaticLauncherIntegration="false" launchMode="startupFirstWindow" launchInNewProcess="false" launchSchedule="updateSchedule" allLaunchers="true">
+        <serializedBean>
+          <java class="java.beans.XMLDecoder">
+            <object class="com.install4j.runtime.beans.applications.UninstallerApplication" id="UninstallerApplication0">
+              <void property="customHeaderImage">
+                <object class="com.install4j.api.beans.ExternalFile">
+                  <string>./diamond-new-48.png</string>
+                </object>
+              </void>
+              <void property="customIconImageFiles">
+                <void method="add">
+                  <object class="com.install4j.api.beans.ExternalFile">
+                    <string>./users3_16.png</string>
+                  </object>
+                </void>
+                <void method="add">
+                  <object class="com.install4j.api.beans.ExternalFile">
+                    <string>./users3_32.png</string>
+                  </object>
+                </void>
+              </void>
+              <void property="frameSizeClientArea">
+                <boolean>false</boolean>
+              </void>
+              <void property="useCustomIcon">
+                <boolean>true</boolean>
+              </void>
+              <void property="watermark">
+                <boolean>false</boolean>
+              </void>
+            </object>
+          </java>
+        </serializedBean>
+        <launcherIds />
+        <variables />
+        <startup>
+          <screen name="" id="16" customizedId="" beanClass="com.install4j.runtime.beans.screens.StartupScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.screens.StartupScreen" />
+              </java>
+            </serializedBean>
+            <condition />
+            <validation />
+            <preActivation />
+            <postActivation />
+            <actions>
+              <action name="" id="18019" customizedId="" beanClass="com.install4j.runtime.beans.actions.misc.RequestPrivilegesAction" enabled="true" commentSet="false" comment="" actionElevationType="none" rollbackBarrier="false" multiExec="false" failureStrategy="2" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.misc.RequestPrivilegesAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="17754" customizedId="" beanClass="com.install4j.runtime.beans.actions.misc.LoadResponseFileAction" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.misc.LoadResponseFileAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+              <action name="" id="17755" customizedId="" beanClass="com.install4j.runtime.beans.actions.misc.RequireInstallerPrivilegesAction" enabled="true" commentSet="false" comment="" actionElevationType="none" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.misc.RequireInstallerPrivilegesAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+            </actions>
+            <formComponents />
+          </screen>
+        </startup>
+        <screens>
+          <screen name="" id="245" customizedId="" beanClass="com.install4j.runtime.beans.screens.UninstallWelcomeScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.screens.UninstallWelcomeScreen" />
+              </java>
+            </serializedBean>
+            <condition />
+            <validation />
+            <preActivation />
+            <postActivation />
+            <actions />
+            <formComponents />
+          </screen>
+          <screen name="" id="246" customizedId="" beanClass="com.install4j.runtime.beans.screens.UninstallationScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="false" wizardIndexChangeType="unchanged" wizardIndexKey="">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.screens.UninstallationScreen" />
+              </java>
+            </serializedBean>
+            <condition />
+            <validation />
+            <preActivation />
+            <postActivation />
+            <actions>
+              <action name="" id="18018" customizedId="" beanClass="com.install4j.runtime.beans.actions.services.StopServiceAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="3" errorMessage="Could not stop ccollab-server service. Do you wish to continue?">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.services.StopServiceAction">
+                      <void property="launcherId">
+                        <string>2</string>
+                      </void>
+                    </object>
+                  </java>
+                </serializedBean>
+                <condition>File serverXml = new File(context.getInstallationDirectory(), "tomcat/conf/server.xml");
+if (serverXml != null &amp;&amp; serverXml.exists()) {
+    Long currentPort = com.smartbear.ccollab.installer.ServerConfigurationUtils.getServerPort(serverXml);
+    // not available means we need to stop the service
+    return currentPort != null &amp;&amp; !com.smartbear.ccollab.installer.ServerConfigurationUtils.portIsAvailable(currentPort.intValue());
+}
+return false; // no need to stop</condition>
+              </action>
+              <action name="" id="247" customizedId="" beanClass="com.install4j.runtime.beans.actions.UninstallFilesAction" enabled="true" commentSet="false" comment="" actionElevationType="elevated" rollbackBarrier="false" multiExec="false" failureStrategy="1" errorMessage="">
+                <serializedBean>
+                  <java class="java.beans.XMLDecoder">
+                    <object class="com.install4j.runtime.beans.actions.UninstallFilesAction" />
+                  </java>
+                </serializedBean>
+                <condition />
+              </action>
+            </actions>
+            <formComponents />
+          </screen>
+          <screen name="" id="248" customizedId="" beanClass="com.install4j.runtime.beans.screens.UninstallFailureScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="true" wizardIndexChangeType="unchanged" wizardIndexKey="">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.screens.UninstallFailureScreen" />
+              </java>
+            </serializedBean>
+            <condition />
+            <validation />
+            <preActivation />
+            <postActivation />
+            <actions />
+            <formComponents />
+          </screen>
+          <screen name="" id="249" customizedId="" beanClass="com.install4j.runtime.beans.screens.UninstallSuccessScreen" enabled="true" commentSet="false" comment="" actionElevationType="inherit" rollbackBarrier="false" backButton="2" finishScreen="true" wizardIndexChangeType="unchanged" wizardIndexKey="">
+            <serializedBean>
+              <java class="java.beans.XMLDecoder">
+                <object class="com.install4j.runtime.beans.screens.UninstallSuccessScreen" />
+              </java>
+            </serializedBean>
+            <condition />
+            <validation />
+            <preActivation />
+            <postActivation />
+            <actions />
+            <formComponents />
+          </screen>
+        </screens>
+      </application>
+    </applications>
+  </installerGui>
+  <mediaSets>
+    <windows name="Windows" id="8" customizedId="" mediaFileName="" installDir="${compiler:PRODUCTNAME} Server" overridePrincipalLanguage="true" jreBitType="32" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" includedJRE="windows-x86-1.7.0_80" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="true" customInstallBaseDir="" contentFilesType="1" downloadURL="" verifyIntegrity="true">
+      <excludedLaunchers />
+      <excludedBeans />
+      <overriddenPrincipalLanguage id="en" customLocalizationFile="" />
+      <exclude>
+        <entry location="tomcat/bin/startup.sh" fileType="regular" />
+        <entry location="tomcat/bin/tool-wrapper.sh" fileType="regular" />
+        <entry location="tomcat/bin/catalina.sh" fileType="regular" />
+        <entry location="tomcat/bin/version.sh" fileType="regular" />
+        <entry location="tomcat/bin/configtest.sh" fileType="regular" />
+        <entry location="tomcat/bin/daemon.sh" fileType="regular" />
+        <entry location="tomcat/bin/setclasspath.sh" fileType="regular" />
+        <entry location="tomcat/bin/digest.sh" fileType="regular" />
+        <entry location="tomcat/bin/shutdown.sh" fileType="regular" />
+      </exclude>
+      <variables />
+      <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
+        <commentFiles />
+        <customAttributes />
+      </autoUpdate>
+      <excludedComponents />
+      <includedDownloadableComponents />
+    </windows>
+    <unixInstaller name="Unix Installer" id="37" customizedId="" mediaFileName="" installDir="ccollab_server" overridePrincipalLanguage="true" jreBitType="all" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" includedJRE="" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="false" customInstallBaseDir="" contentFilesType="1" downloadURL="">
+      <excludedLaunchers />
+      <excludedBeans />
+      <overriddenPrincipalLanguage id="en" customLocalizationFile="" />
+      <exclude>
+        <entry location="tomcat/bin/configtest.bat" fileType="regular" />
+        <entry location="tomcat/bin/digest.bat" fileType="regular" />
+        <entry location="tomcat/bin/tool-wrapper.bat" fileType="regular" />
+        <entry location="tomcat/bin/startup.bat" fileType="regular" />
+        <entry location="tomcat/bin/version.bat" fileType="regular" />
+        <entry location="tomcat/bin/catalina.bat" fileType="regular" />
+        <entry location="tomcat/bin/setclasspath.bat" fileType="regular" />
+        <entry location="tomcat/bin/shutdown.bat" fileType="regular" />
+      </exclude>
+      <variables />
+      <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
+        <commentFiles />
+        <customAttributes />
+      </autoUpdate>
+      <excludedComponents />
+      <includedDownloadableComponents />
+      <installerScript mode="1" file="">
+        <content />
+      </installerScript>
+    </unixInstaller>
+    <windows name="Windows x64" id="16782" customizedId="" mediaFileName="${compiler:sys.shortName}_${compiler:sys.version}_windows_x64" installDir="${compiler:PRODUCTNAME} Server" overridePrincipalLanguage="true" jreBitType="64" runPostProcessor="false" postProcessor="" failOnPostProcessorError="false" useLegacyMediaFileIds="false" legacyMediaFileIds="" includedJRE="windows-amd64-1.7.0_80" manualJREEntry="false" bundleType="1" jreURL="" jreShared="false" directDownload="false" installOnlyIfNecessary="true" customInstallBaseDir="" contentFilesType="1" downloadURL="" verifyIntegrity="true">
+      <excludedLaunchers />
+      <excludedBeans />
+      <overriddenPrincipalLanguage id="en" customLocalizationFile="" />
+      <exclude>
+        <entry location="tomcat/bin/startup.sh" fileType="regular" />
+        <entry location="tomcat/bin/tool-wrapper.sh" fileType="regular" />
+        <entry location="tomcat/bin/catalina.sh" fileType="regular" />
+        <entry location="tomcat/bin/version.sh" fileType="regular" />
+        <entry location="tomcat/bin/configtest.sh" fileType="regular" />
+        <entry location="tomcat/bin/daemon.sh" fileType="regular" />
+        <entry location="tomcat/bin/setclasspath.sh" fileType="regular" />
+        <entry location="tomcat/bin/digest.sh" fileType="regular" />
+        <entry location="tomcat/bin/shutdown.sh" fileType="regular" />
+      </exclude>
+      <variables />
+      <autoUpdate useMinUpdatableVersion="false" minUpdatableVersion="" useMaxUpdatableVersion="false" maxUpdatableVersion="">
+        <commentFiles />
+        <customAttributes />
+      </autoUpdate>
+      <excludedComponents />
+      <includedDownloadableComponents />
+    </windows>
+  </mediaSets>
+  <buildIds buildAll="true">
+    <mediaSet refId="37" />
+  </buildIds>
+  <buildOptions verbose="false" faster="false" disableSigning="false" debug="false" />
+</install4j>
+
