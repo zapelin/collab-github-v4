@@ -1,3 +1,3 @@
-[submodule "collab-githu-test"]
-	path = collab-githu-test
+[submodule "collab-github-test"]
+	path = collab-github-test
 	url = https://github.com/zapelin/collab-github-test
