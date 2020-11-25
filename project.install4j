@@ -1698,7 +1698,7 @@ return false;
                         </object>
                       </java>
                     </serializedBean>
-                    <initScript>configurationObject.setText( com.smartbear.ccollab.installer.OracleConfigurationUtils.getPassword( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
+                    <initScript>//configurationObject.setText( com.smartbear.ccollab.installer.OracleConfigurationUtils.getPassword( (org.w3c.dom.Document) context.getVariable( com.smartbear.ccollab.installer.IInstallerVariables.CONTEXT_DOCUMENT ) ) );</initScript>
                     <visibilityScript />
                   </formComponent>
                   <formComponent name="" id="14947" customizedId="" beanClass="com.install4j.runtime.beans.formcomponents.SpacerComponent" enabled="true" commentSet="false" comment="" insetTop="" insetLeft="" insetBottom="" insetRight="" resetInitOnPrevious="false">
