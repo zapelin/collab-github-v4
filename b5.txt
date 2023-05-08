@@ -2,4 +2,4 @@
                  <condition>((Integer)context.getVariable( "smartbear.dbtype" )).intValue() == 1</condition>
                  <validation>//com.smartbear.ccollab.installer.MysqlConfigurationUtils.validateDatabaseConnection( context )</validation>
                  <preActivation />
-                 <postActivation />
+                 <postActivation />kl;
